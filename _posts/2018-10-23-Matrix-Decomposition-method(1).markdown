@@ -4,6 +4,7 @@ title:  "Matrix Decomposition _ Method (1)"
 date:   2018-10-23
 author: Eugene Lee
 categories: "Statistical Computing"
+mathjax: true
 ---
 
 # Matrix Decomposition
