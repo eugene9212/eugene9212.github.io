@@ -35,10 +35,7 @@ d_{2} x_{2} = y_{2} \\
 $$
 
 - If A is a low-triangular matrix, it becomes also easy.
-<img src="https://latex.codecogs.com/gif.latex?a_{11}x_1 = y_1 " />
-<img src="https://latex.codecogs.com/gif.latex?a_{21}x_1 + a_{22}x_2 = y_2 " />
-<img src="https://latex.codecogs.com/gif.latex?$$\vdots$$ " />
-<img src="https://latex.codecogs.com/gif.latex?a_{k1}x_1 + \cdots + a_{kk}x_k = y_k " />
+
 
 $$
 a_{11}x_{1} = y_1\\
@@ -60,7 +57,7 @@ Ax = b\\
 BAx = Bb
 $$
 - Idea : at the equation, multiplying B will transform A into a special structure(upper triangular form).
-<img src="https://latex.codecogs.com/gif.latex?\usepackage{amsmath}\[M=\begin{bmatrix}1 & 0 & 0  \\-\frac{a_{21}}{a_{11}} & 1 & 0  \\-\frac{a_{21}}{a_{11}} & 0 & 1  \\\end{bmatrix}\]" />
+
 
 $$
 \usepackage{amsmath}\[M=\begin{bmatrix}1 & 0 & 0  \\-\frac{a_{21}}{a_{11}} & 1 & 0  \\-\frac{a_{21}}{a_{11}} & 0 & 1  \\\end{bmatrix}\]
