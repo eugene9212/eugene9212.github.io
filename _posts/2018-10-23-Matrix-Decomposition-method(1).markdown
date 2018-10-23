@@ -3,7 +3,7 @@ layout: post
 title:  "Matrix Decomposition _ Method (1)"
 date:   2018-10-23
 author: Eugene Lee
-categories: Statistical Computing
+categories: Statistical-Computing
 ---
 
 # Matrix Decomposition
