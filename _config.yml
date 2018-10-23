@@ -48,11 +48,11 @@ jekyll-archives:
 
 # Category descriptions (for archive pages)
 descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+  - cat: Statistics
+    desc: "Posts describing Statistics."
 
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+  - cat: Statistical Computing
+    desc: "Posts describing about Statistical Computing."
 
 # Social icons and sharing options
 #
