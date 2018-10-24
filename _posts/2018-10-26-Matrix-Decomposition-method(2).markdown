@@ -25,15 +25,15 @@ From now on, we will going to find L with following steps.
 
 Stap by step we should look A in (1 by 1) (2 by 2) (3 by 3) (4 by 4) matrix.
 
-- (1) Consider 4, which is (1,1) element of A, as small A. Find $L_{11}$
+- (1) (1 by 1) sub matrix of A. Find $L_{11}$
 
 $4=L_{11}^{2}.$
 
-${\color{blue} \rightarrow L_{11} = 2}$ 
+${\color{blue} \rightarrow} {\color{blue} L_{11} = 2}$
 
 (Here, you do not need to consider sign of the element L)
 
-- (2) Consider $\begin{bmatrix} 4 & 2 \\ 2 & 5 \\\end{bmatrix}$. Now,
+- (2) (2 by 2) sub matrix of A. Find $L_{21}$ and $L_{22}$
 
 $$
 \begin{align}
@@ -45,7 +45,7 @@ $$
 \end{align}
 $$
 
-${\color{blue} \rightarrow L_{21} = 1, L_{22} = 2}$ 
+${\color{blue} \rightarrow L_\{21\} = 1, L_\{22\} = 2}$
 
 - (3) Consider $\begin{bmatrix} 4 & 2 \\ 2 & 5 \\\end{bmatrix}$. Now,
 
