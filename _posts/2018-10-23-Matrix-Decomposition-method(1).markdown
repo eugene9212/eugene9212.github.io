@@ -84,9 +84,9 @@ By multiplying a matrix, you'll going to make A into upper triangular, column by
 - (column1) Remain (1,1) element of A and remove all other elements in the first column of A. Following matrix make this possible. Then you can imagine that, by multiplying $(1,\;-\frac{a_{21}^{(1)}}{a_{11}^{(1)}},\;-\frac{a_{31}^{(1)}}{a_{11}^{(1)}})$ in front of A, we can make column 1 as we want.
 
 $$
-{\color{blue} \begin{bmatrix}{E_{1}} 1 & 0 & 0 \\
+\begin{bmatrix}{E_{1}} 1 & 0 & 0 \\
  -\frac{a_{21}^{(1)}}{a_{11}^{(1)}} & 1 & 0 \\
- -\frac{a_{31}^{(1)}}{a_{11}^{(1)}}) & 0 & 1 \\\end{bmatrix}}
+ -\frac{a_{31}^{(1)}}{a_{11}^{(1)}}) & 0 & 1 \\\end{bmatrix}
 
 \begin{bmatrix}{A^{(1)}} a_{11}^{(1)} & a_{12}^{(1)} & a_{13}^{(1)} \\
  a_{21}^{(1)} & a_{22}^{(1)} & a_{23}^{(1)} \\
@@ -103,9 +103,9 @@ As you can see above, the first column of A looks like an upper triangular matri
 - (column2) Remain (2,2) element of A and remove all other elements in the second column of A.
 
 $$
-{\color{blue} \begin{bmatrix}{E_{2}} 1 & 0 & 0 \\
+\begin{bmatrix}{E_{2}} 1 & 0 & 0 \\
  0 & 1 & 0 \\
- 0 & -\frac{a_{32}^{(2)}}{a_{22}^{(2)}}) & 1 \\\end{bmatrix}}
+ 0 & -\frac{a_{32}^{(2)}}{a_{22}^{(2)}}) & 1 \\\end{bmatrix}
 
 \begin{bmatrix}{A^{(2)}} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
  0 & a_{22}^{(2)} & a_{23}^{(2)} \\
@@ -127,28 +127,7 @@ $$
 ### Implementation in R
 Now, we should implement this in the real computing.
 
-$$
-\lstset{language=R,
-    basicstyle=\small\ttfamily,
-    stringstyle=\color{DarkGreen},
-    otherkeywords={0,1,2,3,4,5,6,7,8,9},
-    morekeywords={TRUE,FALSE},
-    deletekeywords={data,frame,length,as,character},
-    keywordstyle=\color{blue},
-    commentstyle=\color{DarkGreen},
-}
-\begin{document}
-\begin{lstlisting}
-Value.A <- data.frame() #MTM value of each contract within cp A
-# ...
-for(i in 1:length(foo)){
-  if(isTrue(as.character(portfolio_data[i,1])=="A")==TRUE){
-    # ...
-  }
-}
-\end{lstlisting}
-\end{document}
-$$
+
 
 ```
 backsolve(BA, Bb)
