@@ -133,8 +133,13 @@ $$
 Now, we should implement this in the real computing.
 There is one thing to consider when implementing this method.
 In implementation,
-$\begin{bmatrix} 0 & 1 \\ 1 & 0 \\\end{bmatrix}$ is actually $\begin{bmatrix} 1 & 0 \\ 0 & 0 \\\end{bmatrix}$
-In other words, you should change the order of row ahead(which called 'permutation' _ changing the order) when implementing GE.
+
+$$
+\begin{bmatrix} 0 & 1 \\ 1 & 0 \\\end{bmatrix}\;\;\;is actually,\;\;\;
+\begin{bmatrix} 1 & 0 \\ 0 & 0 \\\end{bmatrix}
+$$
+
+In other words, you should change the order of row ahead(which called 'permutation' _ changing the order) when implementing GE. Therefore send the biggest row to the pivot location before you calculate the matrix E.
 
 
 ```
