@@ -49,7 +49,7 @@ $$
 $$
 
 $$
-\therefore x_{1}=\frac{b_{1}}{a_{11}},\;x_{2}=\frac{1}{a_{22}}(b_{2}-\frac{a_{21}b_{1}}{a_{11}}),\;x_{3}=\frac{1}{a_{33}}\Big(-\frac{a_{32}{a_{22}}(b2-\frac{a_{21}b_{1}}{a_{11}}-\frac{a_{31}b_{1}}{a_{11}}) \Big)
+\therefore x_{1}=\frac{b_{1}}{a_{11}},\;x_{2}=\frac{1}{a_{22}}(b_{2}-\frac{a_{21} b_{1}}{a_{11}}),\;x_{3}=\frac{1}{a_{33}}\Big( - \frac{a_{32}}{a_{22}}( b2 - \frac{a_{21} b_{1}}{a_{11}} ) -\frac{a_{31} b_{1}}{a_{11}} \Big)
 $$
 
 
@@ -63,7 +63,7 @@ To sum up, instead of inverting the matrix, decomposing the matrix into the spec
 ### Basic IDea
 
 $$
-{\color{blue} B}Ax = Bb
+{\color{blue} B}Ax = {\color{blue} B}b
 $$
 
 : multiply appropriate matrix B on both sides of linear equation.
