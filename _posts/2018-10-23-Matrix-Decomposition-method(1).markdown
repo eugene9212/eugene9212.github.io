@@ -17,10 +17,10 @@ In this topic, we'll going to learn three methods, Gaussian Elimination, Cholesk
 Before we start specific method, let's take a look at an example(linear equation) form which needs inverting.
 
 $$
-Ax = y
+Ax = b
 $$
 
-If we want to solve this equation, $x = A^{-1}y$ might work. And depending on the shape of A, invert matter becomes much easier. Now, let's think about different forms of A. 
+If we want to solve this equation, $x = A^{-1}b$ might work. And depending on the shape of A, invert matter becomes much easier. Now, let's think about different forms of A. 
 
 - A = diagonal matrix
 
@@ -49,9 +49,7 @@ $$
 $$
 
 $$
-\therefore x_{1}=\frac{b_{1}}{a_{11}},\;
-x_{2}=\frac{1}{a_{22}}(b_{2}-\frac{a_{21}b_{1}}{a_{11}}),\;
-x_{3}=\frac{1}{a_{33}}\big(-\frac{a_{32}{a_{22}}(b2-\frac{a_{21}b_{1}}{a_{11}}-\frac{a_{31}b_{1}}{a_{11}}) \big)
+\therefore x_{1}=\frac{b_{1}}{a_{11}},\;x_{2}=\frac{1}{a_{22}}(b_{2}-\frac{a_{21}b_{1}}{a_{11}}),\;x_{3}=\frac{1}{a_{33}}\Big(-\frac{a_{32}{a_{22}}(b2-\frac{a_{21}b_{1}}{a_{11}}-\frac{a_{31}b_{1}}{a_{11}}) \Big)
 $$
 
 
@@ -65,7 +63,7 @@ To sum up, instead of inverting the matrix, decomposing the matrix into the spec
 ### Basic IDea
 
 $$
-BAx = Bb
+{\color{blue} B}Ax = Bb
 $$
 
 : multiply appropriate matrix B on both sides of linear equation.
