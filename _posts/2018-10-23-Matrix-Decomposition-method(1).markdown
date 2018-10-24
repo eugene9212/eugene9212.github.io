@@ -82,6 +82,7 @@ From now on, we will going to make matrix B, with following steps.
 By multiplying a matrix, you'll going to make A into upper triangular, column by column.
 
 - (column1) Remain (1,1) element of A and remove all other elements in the first column of A. Following matrix make this possible. Then you can imagine that, by multiplying $(1,\;-\frac{a_{21}^{(1)}}{a_{11}^{(1)}},\;-\frac{a_{31}^{(1)}}{a_{11}^{(1)}})$ in front of A, we can make column 1 as we want.
+
 $$
 {\color{blue} \begin{bmatrix}{E_{1}} 1 & 0 & 0 \\
  -\frac{a_{21}^{(1)}}{a_{11}^{(1)}} & 1 & 0 \\
@@ -99,7 +100,7 @@ $$
 
 As you can see above, the first column of A looks like an upper triangular matrix. The following steps are exactly the same concept.
 
-- (column2) Remain (2,2) element of A and remove all other elements in the second column of A. 
+- (column2) Remain (2,2) element of A and remove all other elements in the second column of A.
 
 $$
 {\color{blue} \begin{bmatrix}{E_{2}} 1 & 0 & 0 \\
@@ -138,7 +139,6 @@ $$
 }
 \begin{document}
 \begin{lstlisting}
-#Calculate CE for each counterparty
 Value.A <- data.frame() #MTM value of each contract within cp A
 # ...
 for(i in 1:length(foo)){
