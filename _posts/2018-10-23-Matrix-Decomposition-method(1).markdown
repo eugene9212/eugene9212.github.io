@@ -72,11 +72,9 @@ $$
 
 ### Example
 $$
-\begin{equation}
-A=\begin{spmatrix} a_{11} & a_{12} & a_{13} \\
+A=\begin{bmatrix} a_{11} & a_{12} & a_{13} \\
  a_{21} & a_{22} & a_{23} \\
- a_{31} & a_{32} & a_{33} \\\end{spmatrix}
-\end{equation}
+ a_{31} & a_{32} & a_{33} \\\end{bmatrix}
 $$
 
 From now on, we will going to make matrix B, with following steps.
@@ -86,20 +84,18 @@ By multiplying a matrix, you'll going to make A into upper triangular, column by
 - (column1) Remain (1,1) element of A and remove all other elements in the first column of A. Following matrix make this possible. Then you can imagine that, by multiplying $(1,\;-\frac{a_{21}^{(1)}}{a_{11}^{(1)}},\;-\frac{a_{31}^{(1)}}{a_{11}^{(1)}})$ in front of A, we can make column 1 as we want.
 
 $$
-\begin{equation}
-\begin{spmatrix}{E_{1}} 1 & 0 & 0 \\
+\begin{bmatrix}{E_{1}} 1 & 0 & 0 \\
  -\frac{a_{21}^{(1)}}{a_{11}^{(1)}} & 1 & 0 \\
- -\frac{a_{31}^{(1)}}{a_{11}^{(1)}}) & 0 & 1 \\\end{spmatrix}
+ -\frac{a_{31}^{(1)}}{a_{11}^{(1)}}) & 0 & 1 \\\end{bmatrix}
 
-\begin{spmatrix}{A^{(1)}} a_{11}^{(1)} & a_{12}^{(1)} & a_{13}^{(1)} \\
+\begin{bmatrix}{A^{(1)}} a_{11}^{(1)} & a_{12}^{(1)} & a_{13}^{(1)} \\
  a_{21}^{(1)} & a_{22}^{(1)} & a_{23}^{(1)} \\
- a_{31}^{(1)} & a_{32}^{(1)} & a_{33}^{(1)} \\\end{spmatrix}
+ a_{31}^{(1)} & a_{32}^{(1)} & a_{33}^{(1)} \\\end{bmatrix}
 
 =
-\begin{spmatrix} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
+\begin{bmatrix} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
  0 & a_{22}^{(2)} & a_{23}^{(2)} \\
- 0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{spmatrix}
-\end{equation}
+ 0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{bmatrix}
 $$
 
 As you can see above, the first column of A looks like an upper triangular matrix. The following steps are exactly the same concept.
@@ -107,20 +103,18 @@ As you can see above, the first column of A looks like an upper triangular matri
 - (column2) Remain (2,2) element of A and remove all other elements in the second column of A.
 
 $$
-\begin{equation}
-\begin{spmatrix}{E_{2}} 1 & 0 & 0 \\
+\begin{bmatrix}{E_{2}} 1 & 0 & 0 \\
  0 & 1 & 0 \\
- 0 & -\frac{a_{32}^{(2)}}{a_{22}^{(2)}}) & 1 \\\end{spmatrix}
+ 0 & -\frac{a_{32}^{(2)}}{a_{22}^{(2)}}) & 1 \\\end{bmatrix}
 
-\begin{spmatrix}{A^{(2)}} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
+\begin{bmatrix}{A^{(2)}} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
  0 & a_{22}^{(2)} & a_{23}^{(2)} \\
- 0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{spmatrix}
+ 0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{bmatrix}
 
 =
-\begin{spmatrix} a_{11}^{(3)} & a_{12}^{(3)} & a_{13}^{(3)} \\
+\begin{bmatrix} a_{11}^{(3)} & a_{12}^{(3)} & a_{13}^{(3)} \\
  0 & a_{22}^{(3)} & a_{23}^{(3)} \\
- 0 & 0 & a_{33}^{(3)} \\\end{spmatrix}
-\end{equation}
+ 0 & 0 & a_{33}^{(3)} \\\end{bmatrix}
 $$
 
 (* superscript refers the number of step. Since the value of A keeps changing, this notation is needed to prevent confusion)
