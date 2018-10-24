@@ -8,8 +8,8 @@ mathjax: true
 ---
 
 # Matrix Decomposition
-### Before we begin (Motivation)
-Creating a matrix in computing you have to consider several problems, such as storage matter, computing complexity and inverting issue. Speaking of inverting issue, you would rather use other methods than just invert the matrix using built-in function, for example 'solve' in R.
+### Motivation
+Before we begin, let's think about why matrix decomposition is required in statistical computing. Creating a matrix in computing you have to consider several problems, such as storage matter, computing complexity and inverting issue. Speaking of inverting issue, you would rather use other methods than just invert the matrix using built-in function, for example 'solve' in R.
 
 In this topic, we'll going to learn three methods, Gaussian Elimination, Cholesky Decomposition, and QR decomposition, that can replace inverting and lessen your computation complexity.
 (If you want to get into the bottom line, just skip the following and go straight to Chapter 1)
@@ -60,28 +60,96 @@ To sum up, instead of inverting the matrix, decomposing the matrix into the spec
 - - -
 
 ## Chapter 1. Gaussian Elimination
-### Basic IDea
+### Basic Idea
 
 $$
 {\color{blue} B}Ax = {\color{blue} B}b
 $$
 
 : multiply appropriate matrix B on both sides of linear equation.
+
 (* This matrix B will make matrix A a special form like upper triangular form.)
 
-### How it works
+### Example
 $$
 A=\begin{bmatrix} a_{11} & a_{12} & a_{13} \\
  a_{21} & a_{22} & a_{23} \\
  a_{31} & a_{32} & a_{33} \\\end{bmatrix}
 $$
 
-multiplying a matrix, you'll going to make A upper triangular column by column.
+From now on, we will going to make matrix B, with following steps.
 
-(column1) Remain (1,1) element of A and remove all other elements in the first column of A.
+By multiplying a matrix, you'll going to make A into upper triangular, column by column.
 
+- (column1) Remain (1,1) element of A and remove all other elements in the first column of A. Following matrix make this possible. Then you can imagine that, by multiplying $(1,\;-\frac{a_{21}^{(1)}}{a_{11}^{(1)}},\;-\frac{a_{31}^{(1)}}{a_{11}^{(1)}})$ in front of A, we can make column 1 as we want.
+$$
+{\color{blue} \begin{bmatrix}{E_{1}} 1 & 0 & 0 \\
+ -\frac{a_{21}^{(1)}}{a_{11}^{(1)}} & 1 & 0 \\
+ -\frac{a_{31}^{(1)}}{a_{11}^{(1)}}) & 0 & 1 \\\end{bmatrix}}
+
+\begin{bmatrix}{A^{(1)}} a_{11}^{(1)} & a_{12}^{(1)} & a_{13}^{(1)} \\
+ a_{21}^{(1)} & a_{22}^{(1)} & a_{23}^{(1)} \\
+ a_{31}^{(1)} & a_{32}^{(1)} & a_{33}^{(1)} \\\end{bmatrix}
+
+=
+\begin{bmatrix} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
+ 0 & a_{22}^{(2)} & a_{23}^{(2)} \\
+ 0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{bmatrix}
+$$
+
+As you can see above, the first column of A looks like an upper triangular matrix. The following steps are exactly the same concept.
+
+- (column2) Remain (2,2) element of A and remove all other elements in the second column of A. 
+
+$$
+{\color{blue} \begin{bmatrix}{E_{2}} 1 & 0 & 0 \\
+ 0 & 1 & 0 \\
+ 0 & -\frac{a_{32}^{(2)}}{a_{22}^{(2)}}) & 1 \\\end{bmatrix}}
+
+\begin{bmatrix}{A^{(2)}} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
+ 0 & a_{22}^{(2)} & a_{23}^{(2)} \\
+ 0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{bmatrix}
+
+=
+\begin{bmatrix} a_{11}^{(3)} & a_{12}^{(3)} & a_{13}^{(3)} \\
+ 0 & a_{22}^{(3)} & a_{23}^{(3)} \\
+ 0 & 0 & a_{33}^{(3)} \\\end{bmatrix}
+$$
+
+(* superscript refers the number of step. Since the value of A keeps changing, this notation is needed to prevent confusion)
+
+- Therefore $B=E_{1}E_{2}$ and it makes A into an upper triangular. From here, all you have to do is simple math to solve the equation instead of inverting.
+
+### Additional Knowledge
+- pivot element : diagonal term of upper triangular A is called "pivot element"
 
 ### Implementation in R
+Now, we should implement this in the real computing.
+
+$$
+\lstset{language=R,
+    basicstyle=\small\ttfamily,
+    stringstyle=\color{DarkGreen},
+    otherkeywords={0,1,2,3,4,5,6,7,8,9},
+    morekeywords={TRUE,FALSE},
+    deletekeywords={data,frame,length,as,character},
+    keywordstyle=\color{blue},
+    commentstyle=\color{DarkGreen},
+}
+\begin{document}
+\begin{lstlisting}
+#Calculate CE for each counterparty
+Value.A <- data.frame() #MTM value of each contract within cp A
+# ...
+for(i in 1:length(foo)){
+  if(isTrue(as.character(portfolio_data[i,1])=="A")==TRUE){
+    # ...
+  }
+}
+\end{lstlisting}
+\end{document}
+$$
+
 ```
 backsolve(BA, Bb)
 ```
