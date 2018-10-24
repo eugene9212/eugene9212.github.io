@@ -3,7 +3,7 @@ layout: post
 title:  "Matrix Decomposition _ (1) Gaussian Elimination"
 date:   2018-10-23
 author: Eugene Lee
-categories: "Statistical Computing"
+categories: "Statistical-Computing"
 mathjax: true
 ---
 
@@ -23,7 +23,7 @@ $$
 If we want to solve this equation, $x = A^{-1}y$ might work. And depending on the shape of A, invert matter becomes much easier. Now, let's think about different forms of A. 
 
 - A = diagonal matrix
-- 
+
 $$
 \begin{bmatrix}a_{11} & 0 & 0  \\ 0 & a_{22} & 0  \\ 0 & 0 & a_{33}  \\\end{bmatrix}
 \begin{bmatrix} x_{1}  \\ x_{2}  \\ x_{3}  \\\end{bmatrix}
@@ -33,12 +33,13 @@ $$
 $$
 
 $$
-\therefore x_{1}=\frac{b_{1}}{a_{11}}, x_{2}=\frac{b_{2}}{a_{22}}, x_{3}=\frac{b_{3}}{a_{33}}
+\therefore x_{1}=\frac{b_{1}}{a_{11}},\;x_{2}=\frac{b_{2}}{a_{22}},\; x_{3}=\frac{b_{3}}{a_{33}}
 $$
 
 As you can see above, if A is a diagonal matrix, you don't really need to invert A. Just solve the equation element-wise.
 
 - A = low-triangular matrix
+
 $$
 \begin{bmatrix}a_{11} & 0 & 0  \\ a_{21} & a_{22} & 0  \\ a_{31} & a_{32} & a_{33}  \\\end{bmatrix}
 \begin{bmatrix} x_{1}  \\ x_{2}  \\ x_{3}  \\\end{bmatrix}
@@ -48,9 +49,9 @@ $$
 $$
 
 $$
-\therefore x_{1}=\frac{b_{1}}{a_{11}}, 
-x_{2}=\frac{1}{a_{22}}(b_{2}-\frac{a_{21}b_{1}}{a_{11}}), 
-x_{3}=\frac{1}{a_{33}}\big(-\frac{a_{32}{a_{22}}}(b2-\frac{a_{21}b_{1}}{a_{11}}-\frac{a_{31}b_{1}}{a_{11}}) \big)
+\therefore x_{1}=\frac{b_{1}}{a_{11}},\;
+x_{2}=\frac{1}{a_{22}}(b_{2}-\frac{a_{21}b_{1}}{a_{11}}),\;
+x_{3}=\frac{1}{a_{33}}\big(-\frac{a_{32}{a_{22}}(b2-\frac{a_{21}b_{1}}{a_{11}}-\frac{a_{31}b_{1}}{a_{11}}) \big)
 $$
 
 
@@ -62,6 +63,7 @@ To sum up, instead of inverting the matrix, decomposing the matrix into the spec
 
 ## Chapter 1. Gaussian Elimination
 ### Basic IDea
+
 $$
 BAx = Bb
 $$
