@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Matrix Decomposition _ (1) Gaussian Elimination"
-date:   2018-10-23
+date:   2018-10-25
 author: Eugene Lee
 categories: "Statistical-Computing"
 mathjax: true
+disqus_shortname: eugene
 ---
 
 # Matrix Decomposition
