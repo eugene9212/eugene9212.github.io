@@ -130,9 +130,46 @@ $$
 
 ### Implementation in R
 Now, we should implement this in the real computing.
-
+There is one thing to consider when implementing this method.
+In implementation,
+$\begin{bmatrix} 0 & 1 \\ 1 & 0 \\\end{bmatrix}$ is actually $\begin{bmatrix} 1 & 0 \\ 0 & 0 \\\end{bmatrix}$
+In other words, you should change the order of row ahead(which called 'permutation' _ changing the order) when implementing GE.
 
 
 ```
-backsolve(BA, Bb)
+GE <- function(A, b){
+  n <- dim(A)[1]
+  
+  # combine A and b
+  Ab <- cbind(A, b)
+  
+  for(i in 1:(n-1)){
+    
+    # calculate the order
+    ord <- order(abs(Ab[i:n,i]), decreasing = TRUE) + (i - 1)
+    
+    if (i == 1){
+      ord <- ord
+    } else {
+      k <- i-1
+      ord <- c(seq(1:k),ord)
+    }
+    d <- diag(1, nrow = n, ncol = n)    
+    
+    # create permutation matrix
+    P <- d[ord,]
+    
+    # permute
+    Ab <- P %*% Ab
+    
+    # create elimination matrix
+    d[(i+1):n, i] <- outer(-Ab[(i+1):n, i], Ab[i, i], "/")
+    
+    # eliminate
+    Ab <- d %*% Ab
+  }
+  
+  x <- backsolve(Ab[,1:n], Ab[,n+1], upper.tri = TRUE)
+  return(x)
+}
 ```
