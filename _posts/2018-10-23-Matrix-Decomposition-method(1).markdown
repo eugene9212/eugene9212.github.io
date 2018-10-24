@@ -97,7 +97,7 @@ $$
  0 & a_{22}^{(2)} & a_{23}^{(2)} \\
  0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{bmatrix}
 \\
-\;\;\;E_{1}\;\;\;\;\;A^{(1)}\;\;\;\;\;=\;\;\;\;\;A^{(1)}
+{\color{blue} E_{1}}\;\;\;\;\;\;\;\;A^{(1)}\;\;\;\;\;\;\;\;=\;\;\;\;\;\;A^{(1)}
 $$
 
 As you can see above, the first column of A looks like an upper triangular matrix. The following steps are exactly the same concept.
@@ -118,7 +118,7 @@ $$
  0 & a_{22}^{(3)} & a_{23}^{(3)} \\
  0 & 0 & a_{33}^{(3)} \\\end{bmatrix}
 \\
-\;\;\;E_{2}\;\;\;\;\;A^{(2)}\;\;\;\;\;=\;\;\;\;\;A^{(3)}
+{\color{blue} E_{2}}\;\;\;\;\;\;\;\;A^{(2)}\;\;\;\;\;\;\;\;=\;\;\;\;\;\;A^{(3)}
 $$
 
 (* superscript refers the number of step. Since the value of A keeps changing, this notation is needed to prevent confusion)
