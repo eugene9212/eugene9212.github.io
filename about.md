@@ -7,13 +7,12 @@ permalink: /about/
 - Bacjelor's degree, English Language and Literature
 - Bachelor's degree, Statistics
 - (current) Graduate student, majoring in Applied Statistics
-<img src="{{ site.baseurl }}/assets/ku_logo.jpg" height="200" title="Korea University" class="profile">
+<img src="{{ site.baseurl }}/assets/ku_logo.jpg" height="60" width="50" title="Korea University" class="profile">
 
 # Hobbies
 - Playing Tennis (Favorite Player : Rodger Federer)
 - Watching Arsenal's matches
-<img src="{{ site.baseurl }}/assets/Arsenal_FC.png"  height="200" title="Arsenal" class="profile">
-<img src="{{ site.baseurl }}/assets/tennis.jpg"  height="200" title="Tennis" class="profile">
+<img src="{{ site.baseurl }}/assets/Arsenal_FC.png" height="60" width="50" title="Arsenal" class="profile"><img src="{{ site.baseurl }}/assets/tennis.jpg"  height="50" width="70" title="Tennis" class="profile">
 
 # Brief Self-Introduction
 - I am currently attending Korea University as a graduate student majoring in Statistics.
