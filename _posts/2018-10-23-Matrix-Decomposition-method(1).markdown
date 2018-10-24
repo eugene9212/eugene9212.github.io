@@ -1,11 +1,11 @@
 ---
+disqus_shortname: eugene
 layout: post
 title:  "Matrix Decomposition _ (1) Gaussian Elimination"
 date:   2018-10-25
 author: Eugene Lee
 categories: "Statistical-Computing"
 mathjax: true
-disqus_shortname: eugene
 ---
 
 # Matrix Decomposition
@@ -21,7 +21,7 @@ $$
 Ax = b
 $$
 
-If we want to solve this equation, $x = A^{-1}b$ might work. And depending on the shape of A, invert matter becomes much easier. Now, let's think about different forms of A. 
+If we want to solve this equation, $x = A^{-1}b$ might work. And depending on the shape of A, invert matter becomes much easier. Now, let's think about different forms of A.
 
 - A = diagonal matrix
 
@@ -110,7 +110,7 @@ $$
  0 & 1 & 0 \\
  0 & -\frac{a_{32}^{(2)}}{a_{22}^{(2)}} & 1 \\\end{bmatrix}
 
-\begin{bmatrix}{A^{(2)}} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
+\begin{bmatrix} a_{11}^{(2)} & a_{12}^{(2)} & a_{13}^{(2)} \\
  0 & a_{22}^{(2)} & a_{23}^{(2)} \\
  0 & a_{32}^{(2)} & a_{33}^{(2)} \\\end{bmatrix}
 
@@ -141,6 +141,7 @@ $$
 
 In other words, you should change the order of row ahead(which called 'permutation' _ changing the order) when implementing GE. Therefore send the biggest row to the pivot location before you calculate the matrix E.
 
+The following code is R code, working as Gaussian Elimination.
 
 ```
 GE <- function(A, b){
