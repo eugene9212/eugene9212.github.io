@@ -12,14 +12,6 @@ permalink: /about/
 # Hobbies
 - Playing Tennis (Favorite Player : Rodger Federer)
 - Watching Arsenal's matches
-<div class="row">
-  <div class="column">
-    <img src="{{ site.baseurl }}/assets/Arsenal_FC.png" width="50"  title="Arsenal">
-  </div>
-  <div class="column">
-    <img src="{{ site.baseurl }}/assets/tennis.jpg"  width="70" title="Tennis">
-  </div>
-</div>
 
 # Brief Self-Introduction
 - I am currently attending Korea University as a graduate student majoring in Statistics.
