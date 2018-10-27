@@ -10,12 +10,12 @@ mathjax: true
 
 # Matrix Decomposition
 ### Motivation
-Before we begin, let's think about why matrix decomposition is required in statistical computing. Creating a matrix in computing you have to consider several problems, such as storage matter, computing complexity and inverting issue. Speaking of inverting issue, you would rather use other methods than just invert the matrix using built-in function, for example 'solve' in R.
+Before we begin, let's think about why matrix decomposition is critical in statistical computing. Creating a matrix in computing you have to consider several problems, such as storage matter, computing complexity and inverting issue. Speaking of inverting issue, rather than using built-in function which calculate the inverted matrix, you should seek for other methods to replace it because computation gets large when you invert the matrix.
 
-In this topic, we'll going to learn three methods, Gaussian Elimination, Cholesky Decomposition, and QR decomposition, that can replace inverting and lessen your computation complexity.
-(If you want to get into the bottom line, just skip the following and go straight to Chapter 1)
+Matrix Decomposition topic will handle three methods, Gaussian Elimination, Cholesky Decomposition, and QR decomposition, that are able to replace inverting and lessen your computation complexity.
+(If you want to get into the bottom line, just skip the followings and go straight to Chapter 1)
 
-Before we start specific method, let's take a look at an example(linear equation) form which needs inverting.
+Before we start a specific method, let's take a look at an example(linear equation) form which needs inverting.
 
 $$
 Ax = b
