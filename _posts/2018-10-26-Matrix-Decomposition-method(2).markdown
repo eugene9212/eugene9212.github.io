@@ -58,9 +58,10 @@ $$
 \end{align}
 $$
 
-$\rightarrow L_{31} = 1, L_{32} = 3}, L_{33} = 3$
+$\rightarrow L_{31} = 1, L_{32} = 3, L_{33} = 3$
 
-- To sum up, 
+- To sum up,
+
 $$
 \begin{bmatrix} A^{[k-1]} & a^{[k]} \\
  (a^{[k]})^{T} & a_{kk} \\\end{bmatrix}
@@ -80,7 +81,7 @@ $$
 X^{T}A^{-1}X
 $$
 
-In Statistics, A is often an inverse of a variance. This can be a common form by extending $\big(\frac{\hat{\beta}}{\sqrt(se(\hat{\beta}))}\big)^2$ into a multivariate version.
+In Statistics, A is often an inverse of a variance. This can be a common form by extending $\big(\frac{\hat{\beta}}{\sqrt{se(\hat{\beta})}}\big)^2$ into a multivariate version.
 
 To solve this,
 
@@ -92,10 +93,11 @@ $$
 - (step 2) Solve $Ly=x$   $\Leftrightarrow$    $y=L^{-1}x$
 (Since L is low triangular, forward solve is possible.)
 
-- (step 3) Solve X^{T}A^{-1}X
+- (step 3) Solve $X^{T}A^{-1}X$
 Then,
 
 $$
+\begin{align}
 x^{T}A^{-1}x &= x^{T}(LL^{T})^{-1}x
 &= x^{T}(L^{T})^{-1}L^{-1}x
 &= (L^{-1}x)^{T}L^{-1}x
@@ -112,12 +114,10 @@ $$
 ### Implementation in R
 Therefore, Cholesky Decomposition is solving,
 $$
-\[
 \begin{cases}
     L^{[k-1]}l^{[k]}=a^{[k]}\\
     l_{kk}^2 = a_{kk}-(l^{[k]})^{T}(l^{[k]})
 \end{cases}
-\]
 $$
 
 
