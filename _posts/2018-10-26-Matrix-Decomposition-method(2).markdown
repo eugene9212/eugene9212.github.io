@@ -28,7 +28,7 @@ Stap by step we should look A in (1 by 1) (2 by 2) (3 by 3)matrix.
 
 $4=L_{11}^{2}.$
 
-${\color{blue} \rightarrow} {\color{blue} L_{11} = 2}$
+$\rightarrow L_{11} = 2$
 
 (Here, you do not need to consider sign of the element L)
 
@@ -44,9 +44,9 @@ $$
 \end{align}
 $$
 
-${\color{blue} \rightarrow L_\{21\} = 1, L_\{22\} = 2}$
+$\rightarrow L_\{21\} = 1, L_\{22\} = 2$
 
-- (3) (3 by 3) sub matrix of A. Find $L_{31}$, $L_{32}, and $L_{33}$
+- (3) (3 by 3) sub matrix of A. Find $ L_{31},\;\;L_{32},\;\;\text{and}\;\;L_{33}$
 
 $$
 \begin{align}
@@ -58,7 +58,7 @@ $$
 \end{align}
 $$
 
-${\color{blue} \rightarrow L_\{31\} = 1, L_\{32\} = 3}, L_\{33\} = 3}$
+$\rightarrow L_{31} = 1, L_{32} = 3}, L_{33} = 3$
 
 - To sum up, 
 $$
@@ -94,6 +94,7 @@ $$
 
 - (step 3) Solve X^{T}A^{-1}X
 Then,
+
 $$
 x^{T}A^{-1}x &= x^{T}(LL^{T})^{-1}x
 &= x^{T}(L^{T})^{-1}L^{-1}x
@@ -101,7 +102,9 @@ x^{T}A^{-1}x &= x^{T}(LL^{T})^{-1}x
 &= y^{T}y
 \end{align}
 $$
+
 $x^{T}A^{-1}x$
+
 $$
 A=LL^T
 $$
@@ -109,14 +112,12 @@ $$
 ### Implementation in R
 Therefore, Cholesky Decomposition is solving,
 $$
-\begin{document}
 \[
 \begin{cases}
     L^{[k-1]}l^{[k]}=a^{[k]}\\
     l_{kk}^2 = a_{kk}-(l^{[k]})^{T}(l^{[k]})
 \end{cases}
 \]
-\end{document}
 $$
 
 
