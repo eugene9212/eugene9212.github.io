@@ -52,7 +52,7 @@ $$
 \begin{align}
 \begin{bmatrix} 4 & 2 & 2\\ 2 & 5 & 7\\ 2 & 7 & 19\\\end{bmatrix}
 &=
-\begin{bmatrix} 2 & 0 & 0 \\ 1 & 2 & 0 \\ L_{31} & $L_{32} & $L_{33} \\\end{bmatrix}
+\begin{bmatrix} 2 & 0 & 0 \\ 1 & 2 & 0 \\ L_{31} & L_{32} & L_{33} \\\end{bmatrix}
 \begin{bmatrix} 2 & 1 & L_{31} \\ 0 & 2 & & L_{32} \\ 0 & 0 & L_{33}\end{bmatrix}\\
 &=\begin{bmatrix} 4 & 2 & 2L_{31} \\ 2 & 4 & L_{31} + 2L_{32} \\ 2 L_{31} & L_{31}^2 + 2 L_{32}^2 & L_{31}^2 + L_{32}^2 + L_{33}^2\end{bmatrix}
 \end{align}
@@ -98,10 +98,10 @@ Then,
 
 $$
 \begin{align}
-x^{T}A^{-1}x &= x^{T}(LL^{T})^{-1}x
-&= x^{T}(L^{T})^{-1}L^{-1}x
-&= (L^{-1}x)^{T}L^{-1}x
-&= y^{T}y
+x^{T}A^{-1}x &= x^{T}(LL^{T})^{-1}x\\
+&= x^{T}(L^{T})^{-1}L^{-1}x\\
+&= (L^{-1}x)^{T}L^{-1}x\\
+&= y^{T}y\\
 \end{align}
 $$
 
