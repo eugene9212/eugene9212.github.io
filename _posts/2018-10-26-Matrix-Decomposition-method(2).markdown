@@ -1,5 +1,6 @@
 ---
-disqus_shortname: eugene
+disqus_shortname: eugene9212
+comments: true
 layout: post
 title:  "Matrix Decomposition _ (2) Cholesky Decomposition"
 date:   2018-10-26
