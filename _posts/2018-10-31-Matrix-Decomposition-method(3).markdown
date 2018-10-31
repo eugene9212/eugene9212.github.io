@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Ch1. Matrix Decomposition _ (3.1) Gram Schimidt"
-date:   2018-10-26
+title:  "Ch1. Matrix Decomposition _ (3.1) Gram Schmidt"
+date:   2018-10-30
 author: Eugene Lee
 categories: "Statistical-Computing"
 mathjax: true
