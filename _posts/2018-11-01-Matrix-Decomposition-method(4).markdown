@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Ch1. Matrix Decomposition _ (3.1) Gram Schimidt"
-date:   2018-10-26
+title:  "Ch1. Matrix Decomposition _ (3.2) Householder Transformation"
+date:   2018-11-01
 author: Eugene Lee
 categories: "Statistical-Computing"
 mathjax: true
@@ -12,8 +12,30 @@ mathjax: true
 
 ---
 
-### 1.3.1 Introduction of QR decomposition
-#### Motivation
+### 1.3.3 Householder Transformation
+#### Breif Preview of following two methods
+
+#### Basic Idea
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Before start this topic, let's briefly introduce Linear Regression for real example.
 
 - linear regression : $y=\beta X + e\;\;\;\;\;e\overset{iid}\sim N_{p} (0,\sigma^2 I_{p})$
