@@ -39,9 +39,17 @@ It will build up a model which works perfectly on the specific data, train set.
 You can construct a model with train set, and choose an hyper parameter with test set. In this case, you do not know this set of hyper parameters actually works well on new data set.
 
 
+## Linear Classification
+Understanding basic concept of linea classification will enhance your knowledge on Neural Network and CNN.
 
+### Parametric Approach
+Linear classifier is one of the simplest examples of parametric model.
 
+input : (32 x 32 x 3) image data\\
+model : f(x,W) , x refers to input data and W is parameters/weights\\
+output : class scores\\
 
+In the above example, W is a set of parameters or weights and it contains the information on train data. Considering KNN, it has no weights and it only use the whole train set.
 
 
 
