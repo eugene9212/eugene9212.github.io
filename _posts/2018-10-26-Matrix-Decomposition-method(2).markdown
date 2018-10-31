@@ -2,15 +2,15 @@
 disqus_shortname: eugene9212
 comments: true
 layout: post
-title:  "Matrix Decomposition _ (2) Cholesky Decomposition"
+title:  "Ch1. Matrix Decomposition _ (2) Cholesky Decomposition"
 date:   2018-10-26
 author: Eugene Lee
 categories: "Statistical-Computing"
 mathjax: true
 ---
 
-# Matrix Decomposition
-## Chapter 2. Cholesky Decomposition
+# Chapter 1. Matrix Decomposition
+## 1.2. Cholesky Decomposition
 ### Basic Idea
 Transform A into $LL^{T}$ form. (L refers to lower triangular matrix)
 

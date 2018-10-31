@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Matrix Decomposition _ (1) Gaussian Elimination"
+title:  "Ch1. Matrix Decomposition _ (1) Gaussian Elimination"
 date:   2018-10-25
 author: Eugene Lee
 categories: "Statistical-Computing"
@@ -8,8 +8,8 @@ tags : Gaussian Elimination, Matrix Decomposition
 mathjax: true
 ---
 
-# Matrix Decomposition
-### Motivation
+# Chapter 1. Matrix Decomposition
+#### Motivation
 Before we begin, let's think about why matrix decomposition is critical in statistical computing. Creating a matrix in computing you have to consider several problems, such as storage matter, computing complexity and inverting issue. Speaking of inverting issue, rather than using built-in function which calculate the inverted matrix, you should seek for other methods to replace it because computation gets large when you invert the matrix.
 
 Matrix Decomposition topic will handle three methods, Gaussian Elimination, Cholesky Decomposition, and QR decomposition, that are able to replace inverting and lessen your computation complexity.
@@ -60,7 +60,7 @@ To sum up, instead of inverting the matrix, decomposing the matrix into the spec
 
 - - -
 
-## Chapter 1. Gaussian Elimination
+## 1.1 Gaussian Elimination
 ### Basic Idea
 
 $$
